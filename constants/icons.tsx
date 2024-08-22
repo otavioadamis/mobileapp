@@ -1,7 +1,6 @@
 import Entypo from '@expo/vector-icons/Entypo';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { View } from 'react-native';
 
 const Home = ({ color="black" }: { color: string }) => {
     return (
@@ -23,10 +22,22 @@ const Messages = ({ color }: { color: string }) => {
         <AntDesign name="message1" size={24} color={color} />
     );
 };
+const EyeShow = ({ color }: { color: string }) => {
+    return (
+        <Entypo name="eye" size={24} color={color} />
+    );
+};
+const EyeHide = ({ color }: { color: string }) => {
+    return (
+        <Entypo name="eye-with-line" size={24} color="black" />
+    );
+};
 
 export default {
     Home,
     Search,
     Notifications,
-    Messages
+    Messages,
+    EyeShow,
+    EyeHide
 }
