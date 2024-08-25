@@ -12,17 +12,17 @@ export class UserService {
     }
 
     async login(loginRequest: LoginRequest): Promise<LoginResponse> {
-        try {            
+        try {
             const response = await this.http.post<LoginResponse>('User/login', loginRequest);
             return response.data;
-        } catch (error) {      
+        } catch (error) {
             console.error("Login failed", error);
             throw error;
         }
     }
 
     async signup(signupRequest: SignupRequest): Promise<LoginResponse> {
-        try{
+        try {
             const response = await this.http.post<LoginResponse>('User', signupRequest);
             return response.data
         } catch (error) {
@@ -31,13 +31,13 @@ export class UserService {
         }
     }
 
-    async getCurrentUser(id: String): Promise<User>{
-        try{
+    async getCurrentUser(id: String): Promise<User> {
+        try {
             const response = await this.http.get<User>(`User/${id}}`);
             return response.data;
         } catch (error) {
             console.log("Erro ao buscar user", error)
             throw error;
         }
-    } 
+    }
 }

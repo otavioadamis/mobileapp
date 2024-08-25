@@ -2,7 +2,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-const Home = ({ color="black" }: { color: string }) => {
+const Home = ({ color = "black" }: { color: string }) => {
     return (
         <Entypo name="home" size={24} color={color} />
     );
@@ -22,6 +22,7 @@ const Messages = ({ color }: { color: string }) => {
         <AntDesign name="message1" size={24} color={color} />
     );
 };
+
 const EyeShow = ({ color }: { color: string }) => {
     return (
         <Entypo name="eye" size={24} color={color} />
@@ -29,7 +30,19 @@ const EyeShow = ({ color }: { color: string }) => {
 };
 const EyeHide = ({ color }: { color: string }) => {
     return (
-        <Entypo name="eye-with-line" size={24} color="black" />
+        <Entypo name="eye-with-line" size={24} color={color} />
+    );
+};
+
+const ThreeDots = ({ color }: { color: string }) => {
+    return (
+        <Entypo name="dots-three-vertical" size={24} color={color} />
+    );
+};
+
+const Config = ({ color }: { color: string }) => {
+    return (
+        <Ionicons name="settings-outline" size={24} color={color}/>
     );
 };
 
@@ -39,5 +52,7 @@ export default {
     Notifications,
     Messages,
     EyeShow,
-    EyeHide
+    EyeHide,
+    ThreeDots,
+    Config
 }

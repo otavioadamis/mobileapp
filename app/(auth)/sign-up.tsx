@@ -5,6 +5,7 @@ import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link, router } from 'expo-router'
 import { UserService } from '../../services/api/user/UserService'
+import { useUserContext } from '../../context/UserContext'
 
 const SignUp = () => {
 
@@ -14,7 +15,8 @@ const SignUp = () => {
     password: ''
   })
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const userContext = useUserContext();
   const userService = new UserService();
 
   const submit = async () => {
@@ -23,8 +25,10 @@ const SignUp = () => {
     }
 
     setIsLoading(true);
-    const response = await userService.signup(form);
-    //global state depois
+    const signupResponse = await userService.signup(form);
+    
+    userContext.setUser(signupResponse.user)
+    userContext.setIsLoggedIn(true);
 
     router.replace('/home')
     setIsLoading(false);

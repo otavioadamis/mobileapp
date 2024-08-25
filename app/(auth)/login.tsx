@@ -1,11 +1,11 @@
 import { View, Text, ScrollView, Alert } from 'react-native'
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link, router } from 'expo-router'
 import { UserService } from '../../services/api/user/UserService'
-import { UserContext } from '../../context/UserContext'
+import { useUserContext } from '../../context/UserContext'
 import { User } from '../../models/user/User'
 
 const Login = () => {
@@ -14,7 +14,7 @@ const Login = () => {
     password: ''
   })
 
-  const userContext = useContext(UserContext)
+  const userContext = useUserContext();
 
   const [isLoading, setIsLoading] = useState(false)
   const userService = new UserService();
@@ -23,20 +23,18 @@ const Login = () => {
     if (!form.email || !form.password) {
       Alert.alert('Error', 'Todos os campos são obrigatórios.')
     }
-
     setIsLoading(true);
-
     const loginResponse = await userService.login(form);
-
+    
     const user: User = {
       id: loginResponse.user.id,
       name: loginResponse.user.name,
       email: loginResponse.user.email,
-    }
+    } 
 
-    console.log(user.name);
-    userContext.setUser(user);
-
+    userContext.setUser(loginResponse.user);
+    userContext.setIsLoggedIn(true);
+    
     router.replace('/home')
     setIsLoading(false);
   }

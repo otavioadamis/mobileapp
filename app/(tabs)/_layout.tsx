@@ -2,6 +2,8 @@ import { View, Text } from 'react-native'
 import React, { FC } from 'react'
 import { Tabs } from 'expo-router'
 import icons from '../../constants/icons'
+import NavBar from '../../components/NavBar';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface TabIconProps {
   icon: React.ComponentType<{ color: string, size: number }>;
@@ -28,6 +30,11 @@ const TabIcon: FC<TabIconProps> =
 const TabsLayout = () => {
   return (
     <>
+    
+    <SafeAreaView>
+      <NavBar/>
+    </SafeAreaView>
+
       <Tabs screenOptions={{
         tabBarShowLabel: false,
         tabBarActiveTintColor: '#FFA006',
