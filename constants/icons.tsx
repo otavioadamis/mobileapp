@@ -1,6 +1,7 @@
 import Entypo from '@expo/vector-icons/Entypo';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const Home = ({ color = "black" }: { color: string }) => {
     return (
@@ -46,6 +47,24 @@ const Config = ({ color }: { color: string }) => {
     );
 };
 
+const Comment = ({ color, size }: { color: string, size: number }) => {
+    return (
+        <FontAwesome name="comment-o" size={size} color={color} />
+    );
+};
+
+const Heart = ({ color, size }: { color: string, size: number }) => {
+    return (
+        <AntDesign name="hearto" size={size} color={color} />
+    );
+};
+
+const Share = ({ color='black', size=24 }: { color: string, size: number }) => {
+    return (
+        <AntDesign name="sharealt" size={size} color={color} />
+    );
+};
+
 export default {
     Home,
     Search,
@@ -54,5 +73,8 @@ export default {
     EyeShow,
     EyeHide,
     ThreeDots,
-    Config
+    Config,
+    Comment,
+    Heart,
+    Share
 }
