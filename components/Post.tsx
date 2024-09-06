@@ -1,10 +1,51 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
+import images from '../constants/images';
+import Icons from '../constants/icons';
 
 const Post = () => {
   return (  
-    <View className='flex w-full'>
-    </View> 
+    <View className='flex-row ml-2 mt-2'>
+    <View className='mt-1'>
+      <Image
+        source={images.profile}
+        resizeMethod='resize'
+        className='w-12 h-10 rounded-full'
+      />
+    </View>
+    <View className='flex-col ml-3'>
+      <View className='flex-row space-x-2'>
+        <View>
+          <Text className='font-semibold text-base'>Otavinho</Text>
+        </View>
+        <View>
+          <Text className='font-medium text-gray-500 text-base'>@eden</Text>
+        </View>
+        <View>
+          <Text className='font-medium text-gray-500 text-base'>1d</Text>
+        </View>
+      </View>
+      <View className='flex-col mr-[7vh] gap-2'>
+        <View>
+          <Text className='text-base'>aoijhgioajgoiajoiajgoijaoi joiaj oiagjaoigj oij giahogo ijgoiajgoi a ogjaoigj aoigoiaj g</Text>
+        </View>
+        <View className='flex-row space-x-12'>
+          <View className='flex-row space-x-2 items-center'>
+          <Icons.Comment color='black' size={16}/>
+          <Text>23</Text>
+          </View>
+          <View className='flex-row space-x-2 items-center'>
+          <Icons.Heart color='black' size={16}/>
+          <Text>23</Text>
+          </View>
+          <View className='flex-row space-x-2 items-center'>
+          <Icons.Share color='black' size={16}/>
+          <Text>23</Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
   )
 }
 
