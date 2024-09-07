@@ -19,7 +19,6 @@ const CustomButton: FC<ButtonProps> = ({ title, handlePress, isLoading, otherSty
       }
       disabled={isLoading}
     >
-
       <Text className='text-black font-semibold text-lg'>{title}</Text>
     </TouchableOpacity>
   )

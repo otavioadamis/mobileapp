@@ -3,6 +3,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useUserContext } from '../../context/UserContext';
 import Post from '../../components/Post';
 import { ScrollView, View } from 'react-native';
+import FloatingButton from '../../components/FloatingButton';
+
 const Home = () => {
   const userContext = useUserContext();
   const username = userContext.user?.name;
@@ -29,6 +31,7 @@ const Home = () => {
           <Post />
         </View>
       </ScrollView>
+      <FloatingButton/>
     </SafeAreaView>
   )
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import { UserContextProvider } from '../context/UserContext'
 import { Stack } from 'expo-router'
 
-
 const RootLayout = () => {
     return (
         <UserContextProvider>
@@ -14,5 +13,4 @@ const RootLayout = () => {
         </UserContextProvider>
     )
 }
-
-export default RootLayout
+export default RootLayout;

@@ -10,7 +10,7 @@ const App = () => {
   return (
     <SafeAreaView>
       <View>
-        <Text>HELLOWORLD</Text>
+        <Link href="/home">Go home</Link>
         <Link href="/login">Go to loginpage</Link>
       </View>
     </SafeAreaView>

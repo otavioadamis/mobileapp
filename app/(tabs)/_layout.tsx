@@ -30,7 +30,6 @@ const TabIcon: FC<TabIconProps> =
 const TabsLayout = () => {
   return (
     <>
-    
     <SafeAreaView>
       <NavBar/>
     </SafeAreaView>
@@ -45,7 +44,6 @@ const TabsLayout = () => {
           borderTopColor: '#232533',
         }
       }}>
-
         <Tabs.Screen
           name="home"
           options={{
@@ -61,7 +59,6 @@ const TabsLayout = () => {
             )
           }}
         />
-
         <Tabs.Screen
           name="search"
           options={{

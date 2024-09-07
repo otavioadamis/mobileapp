@@ -1,17 +1,20 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import images from '../constants/images';
 import Icons from '../constants/icons';
 
 const Post = () => {
-  return (  
+  return (
+    <TouchableOpacity activeOpacity={0.7}>
     <View className='flex-row ml-2 mt-2'>
-    <View className='mt-1'>
+      <View className='mt-1'>
+      <TouchableOpacity activeOpacity={0.3}>
       <Image
         source={images.profile}
         resizeMethod='resize'
         className='w-12 h-10 rounded-full'
       />
+      </TouchableOpacity>
     </View>
     <View className='flex-col ml-3'>
       <View className='flex-row space-x-2'>
@@ -46,6 +49,8 @@ const Post = () => {
       </View>
     </View>
   </View>
+    </TouchableOpacity>  
+
   )
 }
 

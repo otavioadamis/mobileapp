@@ -3,6 +3,8 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import Feather from '@expo/vector-icons/Feather';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 interface IconProps {
     color?: string,
@@ -77,6 +79,24 @@ const NewMessage: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
     );
 };
 
+const Plus: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
+    return (
+        <AntDesign name="plus" size={size} color={color} />
+    );
+};
+
+const Post: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
+    return (
+        <MaterialIcons name="post-add" size={size} color={color} />
+    );
+};
+
+const Camera: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
+    return (
+        <Feather name="camera" size={size} color={color} />
+    );
+};
+
 export default {
     Home,
     Search,
@@ -89,5 +109,8 @@ export default {
     Comment,
     Heart,
     Share,
-    NewMessage
+    NewMessage,
+    Plus,
+    Post,
+    Camera
 }

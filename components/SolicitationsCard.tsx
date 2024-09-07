@@ -1,9 +1,10 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Icons from '../constants/icons'
 
 const SolicitationsCard = () => {
   return (
+    <TouchableOpacity activeOpacity={0.7}>
     <View className='items-center'>
     <View className='flex-row'>
       <View className='items-center justify-center'>
@@ -23,6 +24,8 @@ const SolicitationsCard = () => {
       </View>
     </View>
   </View>
+    </TouchableOpacity>
+
   )
 }
 
