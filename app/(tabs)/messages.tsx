@@ -20,6 +20,7 @@ const Messages = () => {
           <MessageCard />
           <MessageCard />
           <MessageCard />
+          <MessageCard />
         </View>
       </ScrollView>
     </SafeAreaView>
