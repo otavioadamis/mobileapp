@@ -30,9 +30,6 @@ const Home = () => {
         <View>
           <Post />
         </View>
-        <View>
-          <Post />
-        </View>
       </ScrollView>
       <FloatingButton/>
     </SafeAreaView>
