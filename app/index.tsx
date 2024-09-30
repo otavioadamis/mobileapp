@@ -14,7 +14,6 @@ const App = () => {
         <Link href="/login">Go to loginpage</Link>
       </View>
     </SafeAreaView>
-
   )
 }
 

@@ -97,6 +97,18 @@ const Camera: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
     );
 };
 
+const Image: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
+    return (
+        <Entypo name="image" size={size} color={color} />
+    );
+};
+
+const Close: React.FC<IconProps> = ({ color = 'black', size = 24 }) => {
+    return (
+        <AntDesign name="close" size={size} color={color} />
+    );
+};
+
 export default {
     Home,
     Search,
@@ -112,5 +124,7 @@ export default {
     NewMessage,
     Plus,
     Post,
-    Camera
+    Camera,
+    Image,
+    Close
 }

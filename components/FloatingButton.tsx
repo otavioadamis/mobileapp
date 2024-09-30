@@ -1,6 +1,7 @@
 import { View, TouchableWithoutFeedback, Animated } from 'react-native'
 import React, { Component } from 'react'
 import Icons from '../constants/icons'
+import { router } from 'expo-router';
 
 export default class FloatingButton extends Component {
     animation = new Animated.Value(0);
@@ -13,6 +14,9 @@ export default class FloatingButton extends Component {
             useNativeDriver: true
         }).start();
         this.open = !this.open
+    }
+    openPost = () => {
+        router.navigate('create-post')
     }
     render() {
         const cameraStyle = {
@@ -57,7 +61,7 @@ export default class FloatingButton extends Component {
                     </TouchableWithoutFeedback>
                 </View>
                 <View className='absolute'>
-                    <TouchableWithoutFeedback className=''>
+                    <TouchableWithoutFeedback className='' onPress={this.openPost}>
                         <Animated.View className='items-center justify-center bg-[#FFA006] rounded-3xl h-8 w-8 shadow-2xl' style={postStyle}>
                             <Icons.Post color='white' />
                         </Animated.View>
