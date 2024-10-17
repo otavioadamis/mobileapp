@@ -52,24 +52,24 @@ export default class FloatingButton extends Component {
             ]
         }
         return (
-            <View className='absolute flex-1 items-center bottom-14 right-9'>
+            <View className='flex items-center self-end absolute p-8 bottom-0 right-2'>
                 <View className='absolute'>
                     <TouchableWithoutFeedback className=''>
-                        <Animated.View className='items-center justify-center bg-[#FFA006] rounded-3xl h-8 w-8 shadow-2xl' style={cameraStyle}>
+                        <Animated.View className='items-center justify-center bg-[#FFA006] rounded-full h-8 w-8 shadow-md shadow-black' style={cameraStyle}>
                             <Icons.Camera color='white' />
                         </Animated.View>
                     </TouchableWithoutFeedback>
                 </View>
-                <View className='absolute'>
+                <View className='absolute bg-transparent rounded-full shadow-md shadow-black'>
                     <TouchableWithoutFeedback className='' onPress={this.openPost}>
-                        <Animated.View className='items-center justify-center bg-[#FFA006] rounded-3xl h-8 w-8 shadow-2xl' style={postStyle}>
+                        <Animated.View className='items-center justify-center bg-[#FFA006] rounded-full h-8 w-8 shadow-md shadow-black' style={postStyle}>
                             <Icons.Post color='white' />
                         </Animated.View>
                     </TouchableWithoutFeedback>
                 </View>
                 <View className='absolute'>
                     <TouchableWithoutFeedback onPress={this.toggleMenu}>
-                        <Animated.View className='items-center justify-center bg-[#FFA006] rounded-3xl h-10 w-10 shadow-2xl ${}' style={rotation}>
+                        <Animated.View className='items-center justify-center bg-[#FFA006] rounded-full h-10 w-10 shadow-lg shadow-black ${}' style={rotation}>
                             <Icons.Plus color='white' />
                         </Animated.View>
                     </TouchableWithoutFeedback>

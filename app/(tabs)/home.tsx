@@ -10,23 +10,32 @@ const Home = () => {
   const username = userContext.user?.name;
 
   return (
-    <SafeAreaView>
-      <ScrollView className='flex-col divide-y divide-gray-400'>
-        <View>
-          <Post />
-        </View>
-        <View>
-          <Post />
-        </View>
-        <View>
-          <Post />
-        </View>
-        <View>
-          <Post />
-        </View>
-        <View>
-          <Post />
-        </View>
+    <SafeAreaView className='flex-1' edges={['left', 'right', 'bottom']}>
+      <ScrollView className='flex-col divide-y divide-gray-300 space-y-2'>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
+          <View>
+            <Post />
+          </View>
       </ScrollView>
       <FloatingButton/>
     </SafeAreaView>

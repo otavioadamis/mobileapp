@@ -4,14 +4,14 @@ import Icons from '../constants/icons';
 
 const NavBar = () => {
     return (
-        <View className='px-4 space-y-6 bg-slate-800 h-14 content-center'>
+        <View className='px-4 bg-slate-800 h-14 content-center'>
             <View className='flex-row justify-between h-full items-center'>
 
                 <View>
                     <Image
                         source={images.profile}
                         resizeMethod='resize'
-                        className='w-9 h-8 rounded-full'
+                        className='w-9 h-9 rounded-full'
                     />
                 </View>
 
